@@ -1,10 +1,11 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { Sparkles } from 'lucide-react';
+import { Sparkles, Menu, X } from 'lucide-react';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,56 +16,122 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-    return (
-    <nav className={`fixed top-6 left-1/2 -translate-x-1/2 z-50 transition-all duration-500 ${
-      scrolled ? 'w-auto' : 'w-[90%] max-w-5xl'
-    }`}>
-      <div
-        className={`backdrop-blur-xl bg-white/10 border border-white/20 rounded-full px-6 py-4 transition-all duration-500 ${
-          scrolled ? 'bg-white/5' : ''
-        }`}
-        style={{
-          boxShadow: '0 8px 32px 0 rgba(29, 193, 205, 0.1)',
-        }}
-      >
-        <div className="flex items-center justify-between gap-8">
-          <div
-            className={`flex items-center gap-2 transition-all duration-500 ${
-              scrolled ? 'opacity-0 w-0 overflow-hidden' : 'opacity-100 w-auto'
-            }`}
-          >
-            <Sparkles className="w-6 h-6 text-[#1dc1cd]" />
-            <span className="text-white font-bold text-lg whitespace-nowrap">Catalyst</span>
+  const handleLinkClick = () => {
+    setMobileMenuOpen(false);
+  };
+
+  return (
+    <>
+      <nav className={`fixed top-6 left-1/2 -translate-x-1/2 z-50 transition-all duration-500 ${
+        scrolled ? 'w-auto' : 'w-[90%] max-w-5xl'
+      }`}>
+        <div
+          className={`backdrop-blur-xl bg-white/10 border border-white/20 rounded-full px-6 py-4 transition-all duration-500 ${
+            scrolled ? 'bg-white/5' : ''
+          }`}
+          style={{
+            boxShadow: '0 8px 32px 0 rgba(29, 193, 205, 0.1)',
+          }}
+        >
+          <div className="flex items-center justify-between gap-4 md:gap-8">
+            {/* Logo */}
+            <div className="flex items-center gap-2">
+              <Sparkles className="w-5 h-5 md:w-6 md:h-6 text-[#1dc1cd]" />
+              <span className="text-white font-bold text-base md:text-lg whitespace-nowrap">Catalyst</span>
+            </div>
+
+            {/* Desktop Menu */}
+            <div className="hidden md:flex items-center gap-8">
+              <a
+                href="#short-form"
+                className="text-white/90 hover:text-white transition-colors text-sm font-medium whitespace-nowrap"
+              >
+                Short-Form
+              </a>
+              <a
+                href="#services"
+                className="text-white/90 hover:text-white transition-colors text-sm font-medium whitespace-nowrap"
+              >
+                Services
+              </a>
+              <a
+                href="#faq"
+                className="text-white/90 hover:text-white transition-colors text-sm font-medium whitespace-nowrap"
+              >
+                FAQs
+              </a>
+            </div>
+
+            {/* Desktop CTA Button */}
+            <button
+              className={`hidden md:block bg-gradient-to-r from-[#1dc1cd] to-[#7b2cbf] text-white rounded-full font-medium text-sm hover:shadow-lg hover:shadow-[#1dc1cd]/50 transition-all duration-500 whitespace-nowrap ${
+                scrolled ? 'opacity-0 w-0 overflow-hidden px-0 py-0' : 'opacity-100 w-auto px-6 py-2.5'
+              }`}
+            >
+              Book a call
+            </button>
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="md:hidden text-white p-2 hover:bg-white/10 rounded-full transition-colors"
+              aria-label="Toggle menu"
+            >
+              {mobileMenuOpen ? (
+                <X className="w-5 h-5" />
+              ) : (
+                <Menu className="w-5 h-5" />
+              )}
+            </button>
           </div>
-          <div className="flex items-center gap-8">
-            <a
-              href="#short-form"
-              className="text-white/90 hover:text-white transition-colors text-sm font-medium whitespace-nowrap"
-            >
-              Short-Form
-            </a>
-            <a
-              href="#services"
-              className="text-white/90 hover:text-white transition-colors text-sm font-medium whitespace-nowrap"
-            >
-              Services
-            </a>
-            <a
-              href="#faq"
-              className="text-white/90 hover:text-white transition-colors text-sm font-medium whitespace-nowrap"
-            >
-              FAQs
-            </a>
-          </div>
-          <button
-            className={`bg-gradient-to-r from-[#1dc1cd] to-[#7b2cbf] text-white rounded-full font-medium text-sm hover:shadow-lg hover:shadow-[#1dc1cd]/50 transition-all duration-500 whitespace-nowrap ${
-              scrolled ? 'opacity-0 w-0 overflow-hidden px-0 py-0' : 'opacity-100 w-auto px-6 py-2.5'
-            }`}
-          >
-            Book a call
-          </button>
         </div>
-      </div>
-    </nav>
+      </nav>
+
+      {/* Mobile Menu Overlay */}
+      {mobileMenuOpen && (
+        <div
+          className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 md:hidden"
+          onClick={() => setMobileMenuOpen(false)}
+        >
+          <div
+            className="fixed top-24 left-1/2 -translate-x-1/2 w-[90%] max-w-md backdrop-blur-xl bg-white/10 border border-white/20 rounded-3xl p-6"
+            style={{
+              boxShadow: '0 8px 32px 0 rgba(29, 193, 205, 0.2)',
+            }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex flex-col gap-4">
+              <a
+                href="#short-form"
+                onClick={handleLinkClick}
+                className="text-white/90 hover:text-white transition-colors text-base font-medium py-3 px-4 hover:bg-white/10 rounded-xl"
+              >
+                Short-Form
+              </a>
+              <a
+                href="#services"
+                onClick={handleLinkClick}
+                className="text-white/90 hover:text-white transition-colors text-base font-medium py-3 px-4 hover:bg-white/10 rounded-xl"
+              >
+                Services
+              </a>
+              <a
+                href="#faq"
+                onClick={handleLinkClick}
+                className="text-white/90 hover:text-white transition-colors text-base font-medium py-3 px-4 hover:bg-white/10 rounded-xl"
+              >
+                FAQs
+              </a>
+              <button
+                onClick={handleLinkClick}
+                className="bg-gradient-to-r from-[#1dc1cd] to-[#7b2cbf] text-white rounded-full font-medium text-base py-3 px-6 hover:shadow-lg hover:shadow-[#1dc1cd]/50 transition-all mt-2"
+              >
+                Book a call
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+    </>
   );
 }
