@@ -1,0 +1,84 @@
+'use client';
+
+import { Check, X } from 'lucide-react';
+
+const otherAgencies = [
+  'Slow communication',
+  'Single channel approach',
+  'Outdated growth strategies',
+  'Lack of industry research',
+  'Outsourced to mediocre talent',
+];
+
+const catalystFeatures = [
+  'Constant, proactive communication',
+  'Omni-channel approach',
+  'Tailored best-fit solutions',
+  'Provides industry specific expertise',
+  'Experts with 4+ years of experience',
+];
+
+export default function ComparisonSection() {
+  return (
+    <section className="py-32 px-6 relative overflow-hidden" id="services">
+      <div className="absolute inset-0 bg-gradient-to-b from-black via-[#0a0520] to-black" />
+
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-[#1dc1cd] rounded-full filter blur-[120px]" />
+      </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <span className="inline-block bg-white/5 backdrop-blur-sm border border-white/10 rounded-full px-6 py-2 text-white/70 text-sm mb-6">
+            Comparison
+          </span>
+          <h2 className="text-5xl md:text-6xl font-bold text-white mb-4">
+            But, why would you
+          </h2>
+          <h2 className="text-5xl md:text-6xl font-bold text-white">
+            want to work{' '}
+            <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#7b2cbf] to-[#1dc1cd]">
+              with us?
+            </span>
+          </h2>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 space-y-6">
+            <h3 className="text-2xl font-bold text-white/50 mb-8">Other Agencies</h3>
+            {otherAgencies.map((item, index) => (
+              <div key={index} className="flex items-start gap-4">
+                <div className="w-6 h-6 rounded-full bg-red-500/20 flex items-center justify-center flex-shrink-0 mt-1">
+                  <X className="w-4 h-4 text-red-400" />
+                </div>
+                <p className="text-white/60 text-lg">{item}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="bg-gradient-to-br from-[#1dc1cd]/10 via-[#7b2cbf]/10 to-transparent backdrop-blur-sm border border-[#1dc1cd]/30 rounded-3xl p-8 space-y-6 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-[#1dc1cd] rounded-full filter blur-[100px] opacity-20" />
+
+            <div className="relative z-10">
+              <div className="flex items-center gap-3 mb-8">
+                <div className="w-8 h-8 bg-white rounded flex items-center justify-center">
+                  <div className="w-6 h-6 border-2 border-black transform rotate-45" />
+                </div>
+                <h3 className="text-2xl font-bold text-white">catalyst</h3>
+              </div>
+
+              {catalystFeatures.map((item, index) => (
+                <div key={index} className="flex items-start gap-4 mb-6">
+                  <div className="w-6 h-6 rounded-full bg-[#1dc1cd]/30 flex items-center justify-center flex-shrink-0 mt-1">
+                    <Check className="w-4 h-4 text-[#1dc1cd]" />
+                  </div>
+                  <p className="text-white text-lg">{item}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

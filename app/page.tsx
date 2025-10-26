@@ -1,0 +1,21 @@
+import Navbar from '@/components/navbar';
+import HeroSection from '@/components/hero-section';
+import ServicesSection from '@/components/services-section';
+import ComparisonSection from '@/components/comparison-section';
+import TestimonialsSection from '@/components/testimonials-section';
+import FAQSection from '@/components/faq-section';
+import Footer from '@/components/footer';
+
+export default function Home() {
+  return (
+    <main className="min-h-screen bg-black">
+      <Navbar />
+      <HeroSection />
+      <ServicesSection />
+      <ComparisonSection />
+      <TestimonialsSection />
+      <FAQSection />
+      <Footer />
+    </main>
+  );
+}
