@@ -4,7 +4,7 @@ import { Sparkles } from 'lucide-react';
 
 export default function HeroSection() {
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center px-6 relative overflow-hidden">
+    <section className="min-h-screen flex flex-col items-center justify-center px-6 pt-32 md:pt-0 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-black via-[#0a0520] to-black" />
 
       <div className="absolute inset-0 opacity-30">
@@ -25,36 +25,36 @@ export default function HeroSection() {
 
         <div className="space-y-6">
           <div className="flex items-center justify-center gap-4">
-            <Sparkles className="w-12 h-12 text-yellow-300 animate-pulse" />
-            <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-tight">
+            <Sparkles className="w-10 h-10 md:w-12 md:h-12 text-yellow-300 animate-pulse" />
+            <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-tight">
               #1 Growth Engine
             </h1>
           </div>
 
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
             Behind the Internet's Elite
           </h2>
 
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
             Brands & Creators
           </h2>
 
           <div className="flex items-center justify-center gap-4 pt-4">
-            <Sparkles className="w-10 h-10 text-yellow-300 animate-pulse delay-300" />
-            <Sparkles className="w-8 h-8 text-yellow-300 animate-pulse delay-500" />
+            <Sparkles className="w-8 h-8 md:w-10 md:h-10 text-yellow-300 animate-pulse delay-300" />
+            <Sparkles className="w-6 h-6 md:w-8 md:h-8 text-yellow-300 animate-pulse delay-500" />
           </div>
         </div>
 
-        <p className="text-white/60 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed pt-4">
+        <p className="text-white/60 text-base md:text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed pt-4">
           From strategy to editing to distribution, we make your content work harder,
           grow faster, and never stop performing.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
-          <button className="bg-gradient-to-r from-[#1dc1cd] to-[#7b2cbf] text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-2xl hover:shadow-[#1dc1cd]/50 transition-all duration-300 hover:scale-105">
+          <button className="w-full sm:w-auto bg-gradient-to-r from-[#1dc1cd] to-[#7b2cbf] text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-2xl hover:shadow-[#1dc1cd]/50 transition-all duration-300 hover:scale-105">
             Get Started Today
           </button>
-          <button className="bg-white/10 backdrop-blur-sm border border-white/20 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/20 transition-all duration-300">
+          <button className="w-full sm:w-auto bg-white/10 backdrop-blur-sm border border-white/20 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/20 transition-all duration-300">
             View Our Work
           </button>
         </div>
