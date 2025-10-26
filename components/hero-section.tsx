@@ -24,24 +24,24 @@ export default function HeroSection() {
         </div>
 
         <div className="space-y-6">
-          <div className="flex items-center justify-center gap-4">
-            <Sparkles className="w-10 h-10 md:w-12 md:h-12 text-yellow-300 animate-pulse" />
-            <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-tight">
+          <div className="flex items-center justify-center gap-3 md:gap-4">
+            <Sparkles className="w-8 h-8 md:w-12 md:h-12 text-yellow-300 animate-pulse" />
+            <h1 className="text-3xl md:text-7xl lg:text-8xl font-bold text-white leading-tight">
               #1 Growth Engine
             </h1>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
+          <h2 className="text-3xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
             Behind the Internet's Elite
           </h2>
 
-          <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
+          <h2 className="text-3xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
             Brands & Creators
           </h2>
 
           <div className="flex items-center justify-center gap-4 pt-4">
-            <Sparkles className="w-8 h-8 md:w-10 md:h-10 text-yellow-300 animate-pulse delay-300" />
-            <Sparkles className="w-6 h-6 md:w-8 md:h-8 text-yellow-300 animate-pulse delay-500" />
+            <Sparkles className="w-7 h-7 md:w-10 md:h-10 text-yellow-300 animate-pulse delay-300" />
+            <Sparkles className="w-5 h-5 md:w-8 md:h-8 text-yellow-300 animate-pulse delay-500" />
           </div>
         </div>
 
