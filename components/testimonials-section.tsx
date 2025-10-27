@@ -42,15 +42,15 @@ const testimonials = [
 export default function TestimonialsSection() {
   return (
     <section className="py-32 px-6 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-[#0a0520] to-black" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-900 to-black" />
 
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute bottom-1/3 left-1/4 w-96 h-96 bg-[#7b2cbf] rounded-full filter blur-[120px]" />
+        <div className="absolute bottom-1/3 left-1/4 w-96 h-96 bg-cyan-400 rounded-full blur-3xl" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <span className="inline-block bg-white/5 backdrop-blur-sm border border-white/10 rounded-full px-6 py-2 text-white/70 text-sm mb-6">
+          <span className="inline-block bg-white bg-opacity-5 backdrop-blur-sm border border-white border-opacity-10 rounded-full px-6 py-2 text-white text-opacity-70 text-sm mb-6">
             Testimonials
           </span>
           <h2 className="text-5xl md:text-6xl font-bold text-white mb-4">
@@ -58,7 +58,7 @@ export default function TestimonialsSection() {
           </h2>
           <h2 className="text-5xl md:text-6xl font-bold text-white">
             are{' '}
-            <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#7b2cbf] to-[#1dc1cd]">
+            <span className="italic text-cyan-400">
               raving
             </span>{' '}
             about us.
@@ -69,19 +69,19 @@ export default function TestimonialsSection() {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-[#1dc1cd]/30 group"
+              className="bg-white bg-opacity-5 backdrop-blur-sm border border-white border-opacity-10 rounded-2xl p-6 hover:bg-white hover:bg-opacity-10 transition-all duration-300 hover:border-cyan-400 hover:border-opacity-30 group"
             >
-              <p className="text-white/70 text-base leading-relaxed mb-6 group-hover:text-white/90 transition-colors">
+              <p className="text-white text-opacity-70 text-base leading-relaxed mb-6 group-hover:text-white group-hover:text-opacity-90 transition-colors">
                 {testimonial.text}
               </p>
 
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#1dc1cd] to-[#7b2cbf] flex items-center justify-center text-white font-bold text-sm">
+                <div className="w-12 h-12 rounded-full bg-cyan-400 flex items-center justify-center text-black font-bold text-sm">
                   {testimonial.avatar}
                 </div>
                 <div>
                   <p className="text-white font-semibold">{testimonial.name}</p>
-                  <p className="text-white/50 text-sm">{testimonial.role}</p>
+                  <p className="text-white text-opacity-50 text-sm">{testimonial.role}</p>
                 </div>
               </div>
             </div>

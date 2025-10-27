@@ -11,7 +11,7 @@ export default function HeroSection() {
       </div>
 
       <div className="relative z-10 max-w-6xl mx-auto text-center space-y-8">
-        <div className="inline-flex items-center gap-3 bg-white bg-opacity-5 backdrop-blur-sm border border-white border-opacity-10 rounded-full px-6 py-2 mb-4">
+        <div className="inline-flex items-center gap-3 backdrop-blur-sm  rounded-full px-6 py-2 mb-4">
           <div className="flex -space-x-2">
             <div className="w-6 h-6 rounded-full bg-gradient-to-br from-cyan-400 to-blue-400 border-2 border-black" />
             <div className="w-6 h-6 rounded-full bg-gradient-to-br from-cyan-300 to-cyan-500 border-2 border-black" />
