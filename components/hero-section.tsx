@@ -11,7 +11,7 @@ export default function HeroSection() {
       </div>
 
       <div className="relative z-10 max-w-6xl mx-auto text-center space-y-8">
-        <div className="inline-flex items-center gap-3 backdrop-blur-sm  rounded-full px-6 py-2 mb-4">
+        <div className="inline-flex items-center gap-3 border border-white border-opacity-10 rounded-full px-6 py-2 mb-4">
           <div className="flex -space-x-2">
             <div className="w-6 h-6 rounded-full bg-gradient-to-br from-cyan-400 to-blue-400 border-2 border-black" />
             <div className="w-6 h-6 rounded-full bg-gradient-to-br from-cyan-300 to-cyan-500 border-2 border-black" />
@@ -23,18 +23,15 @@ export default function HeroSection() {
 
         <div className="space-y-6">
           <div className="flex items-center justify-center gap-3 md:gap-4">
-            <h1 className="text-3xl md:text-7xl lg:text-8xl font-bold text-white leading-tight">
-              #1 Growth Engine
+            <h1 className="text-3xl md:text-7xl lg:text-6xl font-bold text-white leading-tight">
+              #1 Growth Engine Behind the 
             </h1>
           </div>
 
-          <h2 className="text-3xl md:text-6xl lg:text-7xl  text-white leading-tight">
-            Behind the Internet's Elite
+          <h2 className="text-3xl md:text-6xl lg:text-6xl  text-white leading-tight">
+           Internet's Elite Brands & Creators
           </h2>
 
-          <h2 className="text-3xl md:text-6xl lg:text-7xl  text-white leading-tight">
-            Brands & Creators
-          </h2>
 
           <p className="text-white text-opacity-60 text-base md:text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed pt-4">
             From strategy to editing to distribution, we make your content work harder,
