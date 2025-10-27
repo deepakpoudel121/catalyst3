@@ -35,20 +35,20 @@ export default function FAQSection() {
 
   return (
     <section className="py-32 px-6 relative overflow-hidden" id="faq">
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-[#0a0520] to-black" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-900 to-black" />
 
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#1dc1cd] rounded-full filter blur-[150px]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan-400 rounded-full blur-3xl" />
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto">
         <div className="text-center mb-16">
-          <span className="inline-block bg-white/5 backdrop-blur-sm border border-white/10 rounded-full px-6 py-2 text-white/70 text-sm mb-6">
+          <span className="inline-block bg-white bg-opacity-5 backdrop-blur-sm border border-white border-opacity-10 rounded-full px-6 py-2 text-white text-opacity-70 text-sm mb-6">
             FAQs
           </span>
           <h2 className="text-5xl md:text-6xl font-bold text-white mb-4">
             Questions?{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1dc1cd] to-[#7b2cbf]">
+            <span className="text-cyan-400">
               We've got answers.
             </span>
           </h2>
@@ -58,29 +58,29 @@ export default function FAQSection() {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:border-[#1dc1cd]/30 transition-all duration-300"
+              className="bg-white bg-opacity-5 backdrop-blur-sm border border-white border-opacity-10 rounded-2xl overflow-hidden hover:border-cyan-400 hover:border-opacity-30 transition-all duration-200"
             >
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
                 className="w-full px-8 py-6 flex items-center justify-between text-left group"
               >
-                <span className="text-white font-semibold text-lg pr-8 group-hover:text-[#1dc1cd] transition-colors">
+                <span className="text-white font-semibold text-lg pr-8 group-hover:text-cyan-400 transition-colors duration-200">
                   {faq.question}
                 </span>
                 <ChevronDown
-                  className={`w-6 h-6 text-white/50 flex-shrink-0 transition-transform duration-300 ${
+                  className={`w-6 h-6 text-white text-opacity-50 flex-shrink-0 transition-transform duration-200 ${
                     openIndex === index ? 'rotate-180' : ''
                   }`}
                 />
               </button>
 
               <div
-                className={`overflow-hidden transition-all duration-300 ${
-                  openIndex === index ? 'max-h-96' : 'max-h-0'
+                className={`transition-all duration-200 ease-in-out ${
+                  openIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                 }`}
               >
                 <div className="px-8 pb-6">
-                  <p className="text-white/70 leading-relaxed">{faq.answer}</p>
+                  <p className="text-white text-opacity-70 leading-relaxed">{faq.answer}</p>
                 </div>
               </div>
             </div>
@@ -88,8 +88,8 @@ export default function FAQSection() {
         </div>
 
         <div className="mt-16 text-center">
-          <p className="text-white/60 mb-6">Still have questions?</p>
-          <button className="bg-gradient-to-r from-[#1dc1cd] to-[#7b2cbf] text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-2xl hover:shadow-[#1dc1cd]/50 transition-all duration-300 hover:scale-105">
+          <p className="text-white text-opacity-60 mb-6">Still have questions?</p>
+          <button className="bg-cyan-400 text-black px-8 py-4 rounded-full font-semibold text-lg hover:shadow-2xl hover:shadow-cyan-400 transition-all duration-300 hover:scale-105">
             Book a Call
           </button>
         </div>

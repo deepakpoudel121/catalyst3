@@ -26,7 +26,7 @@ export default function Navbar() {
         scrolled ? 'w-auto' : 'w-[90%] max-w-5xl'
       }`}>
         <div
-          className={`backdrop-blur-xl bg-white bg-opacity-10 border border-white border-opacity-20 rounded-full px-6 py-4 transition-all duration-500 ${
+          className={`backdrop-blur-xl bg-white bg-opacity-10 border border-white border-opacity-20 rounded-2xl px-6 py-4 transition-all duration-500 ${
             scrolled ? 'bg-opacity-5' : ''
           }`}
           style={{
@@ -63,7 +63,7 @@ export default function Navbar() {
 
             {/* Desktop CTA Button */}
             <button
-              className={`hidden md:block bg-cyan-400 text-black rounded-full font-medium text-sm hover:shadow-lg hover:shadow-cyan-400 transition-all duration-500 whitespace-nowrap ${
+              className={`hidden md:block bg-cyan-400 text-black rounded-xl font-medium text-sm hover:shadow-lg hover:shadow-cyan-400 transition-all duration-500 whitespace-nowrap ${
                 scrolled ? 'opacity-0 w-0 overflow-hidden px-0 py-0' : 'opacity-100 w-auto px-6 py-2.5'
               }`}
             >
@@ -73,7 +73,7 @@ export default function Navbar() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="md:hidden text-white p-2 hover:bg-white hover:bg-opacity-10 rounded-full transition-colors"
+              className="md:hidden text-white p-2 hover:bg-white hover:bg-opacity-10 rounded-lg transition-colors"
               aria-label="Toggle menu"
             >
               {mobileMenuOpen ? (
@@ -123,7 +123,7 @@ export default function Navbar() {
               </a>
               <button
                 onClick={handleLinkClick}
-                className="bg-cyan-400 text-black rounded-full font-medium text-base py-3 px-6 hover:shadow-lg hover:shadow-cyan-400 transition-all mt-2"
+                className="bg-cyan-400 text-black rounded-xl font-medium text-base py-3 px-6 hover:shadow-lg hover:shadow-cyan-400 transition-all mt-2"
               >
                 Book a call
               </button>
