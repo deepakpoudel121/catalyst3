@@ -23,18 +23,16 @@ export default function HeroSection() {
 
         <div className="space-y-6">
           <div className="flex items-center justify-center gap-3 md:gap-4">
-            <h1 className="text-3xl md:text-7xl lg:text-8xl font-bold text-white leading-tight">
-              #1 Growth Engine
+            <h1 className="text-3xl md:text-7xl lg:text-6xl font-bold text-white leading-tight">
+              #1 Growth Engine Behind the
             </h1>
           </div>
 
-          <h2 className="text-3xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
-            Behind the Internet's Elite
+          <h2 className="text-3xl md:text-6xl lg:text-6xl text-white leading-tight">
+             Internet's Elite Brands & Creators
           </h2>
 
-          <h2 className="text-3xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
-            Brands & Creators
-          </h2>
+
 
           <p className="text-white text-opacity-60 text-base md:text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed pt-4">
             From strategy to editing to distribution, we make your content work harder,
