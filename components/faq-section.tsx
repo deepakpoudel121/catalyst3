@@ -89,9 +89,9 @@ export default function FAQSection() {
 
         <div className="mt-16 text-center">
           <p className="text-white text-opacity-60 mb-6">Still have questions?</p>
-           <button className="bg-cyan-400 text-black px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-2xl hover:shadow-cyan-400 transition-all duration-300 hover:scale-105">
+          <a href="https://calendly.com/aakashbusiness-io/30min" target="_blank" rel="noopener noreferrer" className="bg-cyan-400 text-black px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-2xl hover:shadow-cyan-400 transition-all duration-300 hover:scale-105 inline-block">
             Book a Call
-          </button>
+          </a>
         </div>
       </div>
     </section>

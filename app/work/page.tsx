@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Play, Twitter, Instagram, Linkedin, Youtube } from 'lucide-react';
 
 const categories = ['All', 'YouTube Videos', 'Short-Form', 'Ad Creatives', 'VSLs'];
@@ -74,6 +74,16 @@ const portfolioItems = [
 
 export default function WorkPage() {
   const [activeCategory, setActiveCategory] = useState('All');
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const filteredItems = activeCategory === 'All' 
     ? portfolioItems 
@@ -82,7 +92,9 @@ export default function WorkPage() {
   return (
     <div className="min-h-screen bg-black">
       {/* Logo Header */}
-      <header className="fixed top-8 left-1/2 -translate-x-1/2 z-50">
+      <header className={`fixed top-8 z-50 transition-all duration-500 ${
+        scrolled ? 'left-8' : 'left-1/2 -translate-x-1/2'
+      }`}>
         <a 
           href="/"
           className="flex items-center gap-2 hover:opacity-80 transition-all duration-300"
@@ -198,9 +210,9 @@ export default function WorkPage() {
           <p className="text-white text-opacity-60 text-lg mb-10 max-w-2xl mx-auto">
             Let's discuss how we can help you dominate your niche and scale your content to new heights.
           </p>
-          <button className="bg-cyan-400 text-black px-10 py-5 rounded-xl font-semibold text-lg hover:shadow-2xl hover:shadow-cyan-400 transition-all duration-300 hover:scale-105">
-            Book a Call
-          </button>
+          <a href="https://calendly.com/aakashbusiness-io/30min" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto bg-cyan-400 text-black px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-2xl hover:shadow-cyan-400 transition-all duration-300 hover:scale-105 inline-block text-center">
+              Book a Call
+            </a>
         </div>
       </section>
 

@@ -23,15 +23,18 @@ export default function HeroSection() {
 
         <div className="space-y-6">
           <div className="flex items-center justify-center gap-3 md:gap-4">
-            <h1 className="text-3xl md:text-7xl lg:text-6xl font-bold text-white leading-tight">
-              #1 Growth Engine Behind the 
+            <h1 className="text-3xl md:text-7xl lg:text-8xl font-bold text-white leading-tight">
+              #1 Growth Engine
             </h1>
           </div>
 
-          <h2 className="text-3xl md:text-6xl lg:text-6xl  text-white leading-tight">
-           Internet's Elite Brands & Creators
+          <h2 className="text-3xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
+            Behind the Internet's Elite
           </h2>
 
+          <h2 className="text-3xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
+            Brands & Creators
+          </h2>
 
           <p className="text-white text-opacity-60 text-base md:text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed pt-4">
             From strategy to editing to distribution, we make your content work harder,
@@ -39,10 +42,10 @@ export default function HeroSection() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
-            <button className="w-full sm:w-auto bg-cyan-400 text-black px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-2xl hover:shadow-cyan-400 transition-all duration-300 hover:scale-105">
+            <a href="https://calendly.com/aakashbusiness-io/30min" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto bg-cyan-400 text-black px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-2xl hover:shadow-cyan-400 transition-all duration-300 hover:scale-105 inline-block text-center">
               Get Started Today
-            </button>
-           <a href="/work" className="w-full sm:w-auto bg-white bg-opacity-10 backdrop-blur-sm border border-cyan-400 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white hover:bg-opacity-20 transition-all duration-300 inline-block text-center">
+            </a>
+            <a href="/work" className="w-full sm:w-auto bg-white bg-opacity-10 backdrop-blur-sm border border-cyan-400 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white hover:bg-opacity-20 transition-all duration-300 inline-block text-center">
               View Our Work
             </a>
           </div>

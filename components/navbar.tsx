@@ -62,13 +62,16 @@ export default function Navbar() {
             </div>
 
             {/* Desktop CTA Button */}
-            <button
+            <a
+              href="https://calendly.com/aakashbusiness-io/30min"
+              target="_blank"
+              rel="noopener noreferrer"
               className={`hidden md:block bg-cyan-400 text-black rounded-xl font-medium text-sm hover:shadow-lg hover:shadow-cyan-400 transition-all duration-500 whitespace-nowrap ${
                 scrolled ? 'opacity-0 w-0 overflow-hidden px-0 py-0' : 'opacity-100 w-auto px-6 py-2.5'
               }`}
             >
               Book a call
-            </button>
+            </a>
 
             {/* Mobile Menu Button */}
             <button
@@ -121,12 +124,15 @@ export default function Navbar() {
               >
                 FAQs
               </a>
-              <button
+              <a
+                href="https://calendly.com/aakashbusiness-io/30min"
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={handleLinkClick}
-                className="bg-cyan-400 text-black rounded-xl font-medium text-base py-3 px-6 hover:shadow-lg hover:shadow-cyan-400 transition-all mt-2"
+                className="bg-cyan-400 text-black rounded-xl font-medium text-base py-3 px-6 hover:shadow-lg hover:shadow-cyan-400 transition-all mt-2 inline-block text-center"
               >
                 Book a call
-              </button>
+              </a>
             </div>
           </div>
         </div>
