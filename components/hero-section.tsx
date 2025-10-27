@@ -28,11 +28,11 @@ export default function HeroSection() {
             </h1>
           </div>
 
-          <h2 className="text-3xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
+          <h2 className="text-3xl md:text-6xl lg:text-7xl  text-white leading-tight">
             Behind the Internet's Elite
           </h2>
 
-          <h2 className="text-3xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
+          <h2 className="text-3xl md:text-6xl lg:text-7xl  text-white leading-tight">
             Brands & Creators
           </h2>
 
@@ -42,10 +42,10 @@ export default function HeroSection() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
-            <button className="w-full sm:w-auto bg-cyan-400 text-black px-8 py-4 rounded-full font-semibold text-lg hover:shadow-2xl hover:shadow-cyan-400 transition-all duration-300 hover:scale-105">
+            <button className="w-full sm:w-auto bg-cyan-400 text-black px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-2xl hover:shadow-cyan-400 transition-all duration-300 hover:scale-105">
               Get Started Today
             </button>
-            <button className="w-full sm:w-auto bg-white bg-opacity-10 backdrop-blur-sm border border-cyan-400 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:bg-opacity-20 transition-all duration-300">
+            <button className="w-full sm:w-auto bg-white bg-opacity-10 backdrop-blur-sm border border-cyan-400 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white hover:bg-opacity-20 transition-all duration-300">
               View Our Work
             </button>
           </div>

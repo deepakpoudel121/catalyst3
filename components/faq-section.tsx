@@ -89,7 +89,7 @@ export default function FAQSection() {
 
         <div className="mt-16 text-center">
           <p className="text-white text-opacity-60 mb-6">Still have questions?</p>
-          <button className="bg-cyan-400 text-black px-8 py-4 rounded-full font-semibold text-lg hover:shadow-2xl hover:shadow-cyan-400 transition-all duration-300 hover:scale-105">
+           <button className="bg-cyan-400 text-black px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-2xl hover:shadow-cyan-400 transition-all duration-300 hover:scale-105">
             Book a Call
           </button>
         </div>
