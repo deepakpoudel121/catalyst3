@@ -42,9 +42,9 @@ export default function HeroSection() {
             <button className="w-full sm:w-auto bg-cyan-400 text-black px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-2xl hover:shadow-cyan-400 transition-all duration-300 hover:scale-105">
               Get Started Today
             </button>
-            <button className="w-full sm:w-auto bg-white bg-opacity-10 backdrop-blur-sm border border-cyan-400 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white hover:bg-opacity-20 transition-all duration-300">
+           <a href="/work" className="w-full sm:w-auto bg-white bg-opacity-10 backdrop-blur-sm border border-cyan-400 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white hover:bg-opacity-20 transition-all duration-300 inline-block text-center">
               View Our Work
-            </button>
+            </a>
           </div>
         </div>
       </div>
