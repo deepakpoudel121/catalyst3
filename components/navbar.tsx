@@ -36,6 +36,7 @@ export default function Navbar() {
           <div className="flex items-center justify-between gap-4 md:gap-8">
             {/* Logo */}
             <div className="flex items-center gap-2">
+            
               <span className="text-white font-bold text-base md:text-lg whitespace-nowrap">Catalyst</span>
             </div>
 

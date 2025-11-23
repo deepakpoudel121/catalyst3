@@ -1,74 +1,26 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import { Play, Twitter, Instagram, Linkedin, Youtube } from 'lucide-react';
+import { useState, useEffect } from "react";
+import { Play, Twitter, Instagram, Linkedin, Youtube } from "lucide-react";
 
-const categories = ['All', 'YouTube Videos', 'Short-Form', 'Ad Creatives', 'VSLs'];
+const categories = ["All", "Short-Form", "Thumbnails"];
 
 const portfolioItems = [
   {
     id: 1,
-    title: 'LinkedIn Growth Strategy',
-    category: 'Short-Form',
-    thumbnail: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-    stats: '2,001% Growth',
-    platform: 'LinkedIn',
+    title: "Splash Video Thumbnail",
+    category: "Thumbnails",
+    thumbnail: "/splashthumbnail.jpg",
+    stats: "2,001% Growth",
+    platform: "YouTube",
   },
   {
     id: 2,
-    title: 'YouTube Explainer Series',
-    category: 'YouTube Videos',
-    thumbnail: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
-    stats: '1M+ Views',
-    platform: 'YouTube',
-  },
-  {
-    id: 3,
-    title: '$10K/mo Guide',
-    category: 'Short-Form',
-    thumbnail: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
-    stats: '500K+ Reach',
-    platform: 'Instagram',
-  },
-  {
-    id: 4,
-    title: 'Pinterest Ad Campaign',
-    category: 'Ad Creatives',
-    thumbnail: 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)',
-    stats: '$15K Revenue',
-    platform: 'Pinterest',
-  },
-  {
-    id: 5,
-    title: 'Product Launch VSL',
-    category: 'VSLs',
-    thumbnail: 'linear-gradient(135deg, #30cfd0 0%, #330867 100%)',
-    stats: '35% Conv. Rate',
-    platform: 'Sales Page',
-  },
-  {
-    id: 6,
-    title: 'Brand Story Series',
-    category: 'YouTube Videos',
-    thumbnail: 'linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)',
-    stats: '2M+ Views',
-    platform: 'YouTube',
-  },
-  {
-    id: 7,
-    title: 'TikTok Viral Content',
-    category: 'Short-Form',
-    thumbnail: 'linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)',
-    stats: '5M+ Views',
-    platform: 'TikTok',
-  },
-  {
-    id: 8,
-    title: 'E-commerce Ad Set',
-    category: 'Ad Creatives',
-    thumbnail: 'linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%)',
-    stats: '3.2x ROAS',
-    platform: 'Facebook',
+    title: "Short Form Content for Renzo",
+    category: "Short-Form",
+    thumbnail: "/bikram.jpg",
+    stats: "2,001% Growth",
+    platform: "Instagram",
   },
 ];
 
@@ -150,36 +102,32 @@ export default function WorkPage() {
       {/* Portfolio Grid */}
       <section className="py-20 px-6 relative">
         <div className="relative z-10 max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredItems.map((item) => (
               <div
                 key={item.id}
                 className="group relative bg-white bg-opacity-5 backdrop-blur-sm border border-white border-opacity-10 rounded-2xl overflow-hidden hover:border-cyan-400 hover:border-opacity-30 transition-all duration-300 cursor-pointer"
               >
                 {/* Thumbnail */}
-                <div 
-                  className="aspect-[9/16] relative"
-                  style={{ background: item.thumbnail }}
-                >
-                  <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-20 transition-all duration-300" />
-                  
-                  {/* Play Button Overlay */}
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className="w-16 h-16 bg-cyan-400 rounded-full flex items-center justify-center transform scale-90 group-hover:scale-100 transition-transform duration-300">
-                      <Play className="w-7 h-7 text-black fill-black ml-1" />
-                    </div>
-                  </div>
+            <div className="aspect-[9/16] relative overflow-hidden">
+            <img 
+              src={item.thumbnail} 
+              alt={item.title || "Thumbnail"}
+              className="w-full h-full object-cover absolute inset-0"
+            />
+            
+            <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-20 transition-all duration-300" />
 
-                  {/* Stats Badge */}
-                  <div className="absolute top-4 left-4 bg-black bg-opacity-60 backdrop-blur-sm px-3 py-1.5 rounded-lg">
-                    <p className="text-cyan-400 font-bold text-sm">{item.stats}</p>
-                  </div>
+            {/* Stats Badge */}
+            <div className="absolute top-4 left-4 bg-black bg-opacity-60 backdrop-blur-sm px-3 py-1.5 rounded-lg z-10">
+              <p className="text-cyan-400 font-bold text-sm">{item.stats}</p>
+            </div>
 
-                  {/* Platform Badge */}
-                  <div className="absolute top-4 right-4 bg-white bg-opacity-10 backdrop-blur-sm px-3 py-1.5 rounded-lg">
-                    <p className="text-white text-xs font-medium">{item.platform}</p>
-                  </div>
-                </div>
+            {/* Platform Badge */}
+            <div className="absolute top-4 right-4 bg-white bg-opacity-10 backdrop-blur-sm px-3 py-1.5 rounded-lg z-10">
+              <p className="text-white text-xs font-medium">{item.platform}</p>
+            </div>
+          </div>
 
                 {/* Info */}
                 <div className="p-4">

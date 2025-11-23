@@ -13,11 +13,27 @@ export default function HeroSection() {
       <div className="relative z-10 max-w-6xl mx-auto text-center space-y-8">
         <div className="inline-flex items-center gap-3 border border-white border-opacity-10 rounded-full px-6 py-2 mb-4">
           <div className="flex -space-x-2">
-            <div className="w-6 h-6 rounded-full bg-gradient-to-br from-cyan-400 to-blue-400 border-2 border-black" />
-            <div className="w-6 h-6 rounded-full bg-gradient-to-br from-cyan-300 to-cyan-500 border-2 border-black" />
-            <div className="w-6 h-6 rounded-full bg-gradient-to-br from-cyan-400 to-teal-400 border-2 border-black" />
-            <div className="w-6 h-6 rounded-full bg-gradient-to-br from-blue-400 to-cyan-400 border-2 border-black" />
-          </div>
+              <img 
+                src="/Splash.jpg"
+                alt="User 1"
+                className="w-6 h-6 rounded-full border-2 border-black object-cover"
+              />
+              <img 
+                src="/bikram.jpg" 
+                alt="User 2"
+                className="w-6 h-6 rounded-full border-2 border-black object-cover"
+              />
+              <img 
+                src="/trevor.jpg" 
+                alt="User 3"
+                className="w-6 h-6 rounded-full border-2 border-black object-cover"
+              />
+              <img 
+                src="/sid.jpg" 
+                alt="User 4"
+                className="w-6 h-6 rounded-full border-2 border-black object-cover"
+              />
+            </div>
           <span className="text-white text-opacity-70 text-sm">Trusted by 20+ creators</span>
         </div>
 
