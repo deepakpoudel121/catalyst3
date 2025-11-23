@@ -7,6 +7,12 @@ const inter = Poppins({ subsets: ['latin'], weight: ['400', '500', '600', '700',
 export const metadata: Metadata = {
   title: 'Catalyst Agency - #1 Growth Engine for Elite Brands & Creators',
   description: 'From strategy to editing to distribution, we make your content work harder, grow faster, and never stop performing.',
+  icons: {
+    icon: '/favicon.png',
+    // Or use PNG/SVG
+    // icon: '/icon.png',
+    // apple: '/apple-icon.png',
+  },
 };
 
 export default function RootLayout({
