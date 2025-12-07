@@ -2,42 +2,43 @@
 
 const testimonials = [
   {
-    name: 'Lara Acosta',
-    role: 'Founder @ LA Digital',
-    text: 'Catalyst and their team are phenomenal. Their unmatched work rate, dedication, and creativity have made them invaluable partners for producing content.',
-    avatar: 'LA',
+    name: 'Bikram Dosanjh',
+    role: 'CEO @ Unicity',
+    text: 'Working with Catalyst has been a huge asset for my personal brand at Unicity. The short-form videos they produced were sharp, well-edited, and consistently aligned with the message I wanted to communicate. Several pieces even went viral, helping us reach people we normally wouldn’t have reached. Professional, fast, and reliable.',
+    avatar: 'BD',
   },
   {
-    name: 'Marcus Engel',
-    role: 'Founder @ 301 Studios',
-    text: 'Catalyst set a new standard for video editing with exceptional quality and efficiency. 10000/10.',
-    avatar: 'ME',
+    name: 'Parikchhit Basnet',
+    role: 'CEO @ Mint Ave',
+    text: 'Catalyst’s understanding of modern content trends is impressive. They helped Mint Ave turn simple ideas into viral short-form content that connected with our target audience. Communication was smooth and the creative direction was always on point. Highly recommend them for anyone wanting to grow fast.',
+    avatar: 'PB',
   },
   {
-    name: 'Mena Mikhail',
-    role: 'Founder @ Human Voice Over',
-    text: 'Working with Catalyst was seamless. The quality was incredible, with versatile video and animation. It\'s a one-stop shop. Excited for a long-term partnership.',
-    avatar: 'MM',
+    name: 'Didar Gidha',
+    role: 'CEO @ WETBLUE MEDIA',
+    text: 'Catalyst delivered strong short-form storytelling that elevated our content at Wetblue Media. High-retention edits, smart hooks, and a smooth workflow made the whole process effortless. Several videos performed extremely well and reinforced our brand credibility. Easily one of the best teams we\'ve worked with.',
+    avatar: 'DG',
   },
   {
-    name: 'Inge von Aulock',
-    role: 'Founder @ Penfriend',
-    text: 'Awesome work! Never once left the loop for any revisions, and made sure end video was exactly what we were looking for.',
-    avatar: 'IA',
+    name: 'Trevor Zheng',
+    role: 'CEO @ Peak-flow Media',
+    text: 'Catalyst provided exactly what I needed: consistent, fast, and viral-focused short-form content. Their editing style matched our brand perfectly and helped Peak-flow Media increase social engagement and audience reach. Very dependable team with great attention to detail.',
+    avatar: 'TZ',
   },
   {
-    name: 'Niall Ratcliffe',
-    role: 'Co-founder @ Ratcliffe Brothers',
-    text: 'Catalyst is the best. He delivers elite videos without hand-holding. I\'m thrilled with his short-form work and will use him for YouTube next. Hire him; he\'s elite.',
-    avatar: 'NR',
+    name: 'Sid Budhathoki',
+    role: 'Entrepreneur @ Dropshipping',
+    text: 'Catalyst helped me turn my ideas into content that actually grabs attention. The videos were clean, trendy, and performed better than anything I had created previously. My visibility increased and I connected better with my audience in the dropshipping space. Amazing work from the team.',
+    avatar: 'SB',
   },
   {
-    name: 'Luke Matthews',
-    role: 'Founder @ AI WRITING made EASY',
-    text: 'Catalyst transformed our video content overnight. From rushed deadlines to outstanding quality, his work exceeded our expectations and elevated our brand.',
-    avatar: 'LM',
+    name: 'Joshua Norris',
+    role: 'Business Owner',
+    text: 'I’m really impressed with Catalyst’s understanding of viral content. Every video they delivered was clear, engaging, and aligned with my brand voice. I saw noticeable improvements in engagement shortly after posting. Super consistent and easy to work with.',
+    avatar: 'JN',
   },
 ];
+
 
 export default function TestimonialsSection() {
   return (
